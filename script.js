@@ -50,6 +50,14 @@ document.getElementById('submit-villain-weapon').addEventListener('click', funct
 
 // Create the render function to bring each player to the screen
 let renderPlayers = () => {
-    document.getElementById('player-row').appendChild(hero.render());
-    document.getElementById('player-row').appendChild(villain.render());
+    let heroHTML = hero.render();
+    let villainHTML = villain.render();
+    document.getElementById('player-row').innerHTML = heroHTML;
+    document.getElementById('player-row').innerHTML = villainHTML;
 }
+
+
+// When play button is clicked, render players to the console
+document.getElementById('play-game').addEventListener('click', function(){
+    renderPlayers();
+})
