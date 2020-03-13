@@ -1,10 +1,11 @@
 // Create the Hero class
 
 class Hero extends Person {
-    constructor() {
-        super(name, health, weapon);
+    constructor(name) {
+        super(name);
     }
 
+    
     render() {
         // Outputs HTML of Hero data, will use simple bootstrap card here
         return `
