@@ -11,8 +11,11 @@
 
 -----------------------------------------------------------
     Issues:
+        - Sizing and spacing of each card
+        - displaying health after the attack has already happened
     Enhancements:
         - Give indication that name and weapon have been added
+        - One submit button per person instead of one button for each person and weapon
 -----------------------------------------------------------
 */
 
@@ -52,8 +55,9 @@ document.getElementById('submit-villain-weapon').addEventListener('click', funct
 let renderPlayers = () => {
     let heroHTML = hero.render();
     let villainHTML = villain.render();
-    document.getElementById('player-row').innerHTML = heroHTML;
-    document.getElementById('player-row').innerHTML = villainHTML;
+    let fightHTML = heroHTML + villainHTML;
+    document.getElementById('player-row').innerHTML = fightHTML;
+    // document.getElementById('player-row').innerHTML = villainHTML;
 }
 
 
